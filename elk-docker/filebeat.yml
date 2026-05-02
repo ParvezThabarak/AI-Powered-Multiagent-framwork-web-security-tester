@@ -1,0 +1,42 @@
+filebeat.inputs:
+
+  - type: filestream
+    id: live-events
+    enabled: true
+    paths:
+      - /reports/live_events.ndjson
+    parsers:
+      - ndjson:
+          target: ""
+          overwrite_keys: true
+          expand_keys: true
+          ignore_decoding_error: true
+
+processors:
+  - add_fields:
+      target: system
+      fields:
+        source: ai-websec-tester
+        pipeline: phase7
+
+  - timestamp:
+      field: "@timestamp"
+      layouts:
+        - "2006-01-02T15:04:05.999999999Z07:00"
+        - "2006-01-02T15:04:05Z"
+      ignore_missing: true
+      ignore_failure: true
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  index: "websec-tester-%{+yyyy.MM.dd}"
+
+setup.kibana:
+  host: "http://kibana:5601"
+
+setup.template.name: "websec-tester"
+setup.template.pattern: "websec-tester-*"
+setup.ilm.enabled: false
+
+logging.level: info
+logging.to_files: false
