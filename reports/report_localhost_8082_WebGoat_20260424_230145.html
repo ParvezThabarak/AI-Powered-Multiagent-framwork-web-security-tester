@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Security Report — http://localhost:8082/WebGoat</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f9fafb;color:#111827;line-height:1.6}
+.hdr{background:linear-gradient(135deg,#1e3a5f,#0f2340);color:white;padding:40px 48px}
+.hdr h1{font-size:28px;font-weight:700;margin-bottom:6px}
+.hdr .sub{color:#94a3b8;font-size:14px}
+.hdr .meta{margin-top:20px;display:flex;gap:32px;flex-wrap:wrap}
+.hdr .mi{font-size:13px}.hdr .mi strong{display:block;color:#cbd5e1;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.wrap{max-width:1200px;margin:0 auto;padding:32px 24px}
+.rbadge{display:inline-flex;align-items:center;gap:8px;background:#ea580c20;border:2px solid #ea580c;color:#ea580c;padding:8px 20px;border-radius:8px;font-weight:700;font-size:18px;margin-bottom:24px}
+.sec{background:white;border-radius:12px;padding:28px;margin-bottom:24px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.sec h2{font-size:18px;font-weight:700;color:#1e3a5f;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #e5e7eb}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px}
+.stat{background:#f8fafc;border-radius:8px;padding:16px;text-align:center;border:1px solid #e5e7eb}
+.stat .n{font-size:32px;font-weight:800;color:#1e3a5f}
+.stat .l{font-size:12px;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+.exec{background:#f0f9ff;border-left:4px solid #0284c7;padding:20px 24px;border-radius:0 8px 8px 0;font-size:15px;line-height:1.8;color:#0c4a6e}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{background:#1e3a5f;color:white;padding:12px;text-align:left;font-weight:600;font-size:13px}
+tr:hover{background:#f8fafc}
+.ps{display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;background:#f8fafc;margin-bottom:8px;border:1px solid #e5e7eb}
+.si{width:36px;height:36px;border-radius:50%;background:#1e3a5f;color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0}
+.sn{font-weight:600;font-size:14px}.sd{font-size:13px;color:#6b7280}
+.ftr{text-align:center;padding:24px;color:#9ca3af;font-size:13px;border-top:1px solid #e5e7eb;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>Security Assessment Report</h1>
+  <div class="sub">AI-Powered Multi-Agent Web Security Tester — Validation-Driven Output</div>
+  <div class="meta">
+    <div class="mi"><strong>Target</strong>http://localhost:8082/WebGoat</div>
+    <div class="mi"><strong>Web Server</strong>Unknown</div>
+    <div class="mi"><strong>Scan Date</strong>2026-04-24 22:57:38</div>
+    <div class="mi"><strong>Mode</strong>FULL</div>
+    <div class="mi"><strong>Duration</strong>247s</div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="rbadge">Overall Risk: HIGH</div>
+  <div class="sec"><h2>Assessment Summary</h2>
+    <div class="grid">
+      <div class="stat"><div class="n">141</div><div class="l">Raw Alerts</div></div>
+      <div class="stat"><div class="n">5</div><div class="l">Candidates Analyzed</div></div>
+      <div class="stat"><div class="n" style="color:#ea580c">2</div><div class="l">Validated Vulns</div></div>
+      <div class="stat"><div class="n" style="color:#059669">40%</div><div class="l">Validation Rate</div></div>
+    </div>
+  </div>
+  <div class="sec"><h2>Executive Summary</h2><div class="exec">We conducted a security assessment of the http://localhost:8082/WebGoat application, identifying significant vulnerabilities that pose a high risk to the system. The assessment revealed a total of 141 alerts, including 2 validated vulnerabilities, with 1 being critical or high severity. Overall, the findings indicate a high risk to the application, requiring immediate attention to prevent potential exploitation.<br><br>Key findings include:<br>* A high-severity SQL injection vulnerability was detected, allowing an attacker to potentially extract or modify sensitive data<br>* A medium-severity misconfiguration issue related to clickjacking was identified, which could be used to trick users into performing unintended actions<br>* The application is vulnerable to attack techniques such as T1557 and T1190, which could be used to compromise the system<br>* The high number of alerts and validated vulnerabilities suggests a lack of robust security measures in place<br><br>Immediate actions to be taken include:<br>* Prioritize the remediation of the high-severity SQL injection vulnerability to prevent data breaches<br>* Address the clickjacking misconfiguration issue to protect users from potential social engineering attacks<br>* Conduct a thorough review of the application's security configuration and implement additional measures to prevent exploitation of identified vulnerabilities</div></div>
+  
+  <div class="sec"><h2>1. Validated Vulnerabilities (2)</h2>
+    <p style="font-size:13px; color:#475569; margin-bottom:12px;">These vulnerabilities have been cryptographically or logically verified via mathematical sandbox exploitation.</p>
+    <div style="overflow-x:auto; margin-bottom:24px;">
+    <table><thead><tr><th>#</th><th>Vulnerability</th><th>Severity</th><th>OWASP</th><th>MITRE ATT&CK</th><th>Remediation</th></tr></thead>
+    <tbody>
+<tr>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb;font-weight:600">1</td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb"><strong>SQLi Detection</strong><br>
+    <small style="color:#6b7280">http://localhost:8082/WebGoat/vulnerabilities/sqli/?id=1</small></td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb">
+    <span style="background:#ea580c;color:white;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:600">
+      HIGH</span></td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb">A03_Injection</td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb">
+    <code style="font-size:12px">T1190</code><br>
+    <small>Exploit Public-Facing Application</small></td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb;font-size:13px">Use parameterised queries and prepared statements. Validate all input server-side.</td>
+</tr>
+<tr>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb;font-weight:600">2</td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb"><strong>Misconfiguration Test [Clickjacking]</strong><br>
+    <small style="color:#6b7280">http://localhost:8082/WebGoat/registration</small></td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb">
+    <span style="background:#d97706;color:white;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:600">
+      MEDIUM</span></td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb">A06_Security_Misconfiguration</td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb">
+    <code style="font-size:12px">T1557</code><br>
+    <small>Unknown</small></td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb;font-size:13px">Review application security controls for this vulnerability class.</td>
+</tr></tbody></table></div>
+    <h3 style="font-size:16px; margin-bottom:12px; color:#1e3a5f;">Validation Evidence</h3>
+    
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #ea580c; border-radius:6px; padding:16px; margin-bottom:16px;">
+  <h4 style="margin-bottom:8px; color:#1e293b;">1. SQLi Detection — sqlmap_detect</h4>
+  <p style="font-size:13px; color:#475569; margin-bottom:4px;"><strong>Target:</strong> <code style="background:#e2e8f0; padding:2px 4px; border-radius:3px;">http://localhost:8082/WebGoat/vulnerabilities/sqli/?id=1</code></p>
+  <p style="font-size:13px; color:#475569; margin-bottom:8px;"><strong>Payload/Args:</strong> <pre style="background:#f1f5f9; padding:8px; border-radius:4px; font-size:12px; overflow-x:auto;">{
+  "url": "http://localhost:8082/WebGoat/vulnerabilities/sqli/?id=1",
+  "level": 1,
+  "risk": 1,
+  "cookie": "JSESSIONID=C0F7EB00AB16CEBFBD53648A95599ED9"
+}</pre></p>
+  <p style="font-size:13px; color:#475569;"><strong>Validation Evidence:</strong> <pre style="background:#1e293b; color:#10b981; padding:8px; border-radius:4px; font-size:12px; overflow-x:auto;">sqlmap confirmed: ___
+       __H__
+ ___ ___[.]_____ ___ ___  {1.10.3.11#dev}
+|_ -| . ["]     | .'| . |
+|___|_  [']_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for a</pre></p>
+</div>
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #d97706; border-radius:6px; padding:16px; margin-bottom:16px;">
+  <h4 style="margin-bottom:8px; color:#1e293b;">2. Misconfiguration Test [Clickjacking] — http_probe</h4>
+  <p style="font-size:13px; color:#475569; margin-bottom:4px;"><strong>Target:</strong> <code style="background:#e2e8f0; padding:2px 4px; border-radius:3px;">http://localhost:8082/WebGoat/registration</code></p>
+  <p style="font-size:13px; color:#475569; margin-bottom:8px;"><strong>Payload/Args:</strong> <pre style="background:#f1f5f9; padding:8px; border-radius:4px; font-size:12px; overflow-x:auto;">{
+  "url": "http://localhost:8082/WebGoat/registration"
+}</pre></p>
+  <p style="font-size:13px; color:#475569;"><strong>Validation Evidence:</strong> <pre style="background:#1e293b; color:#10b981; padding:8px; border-radius:4px; font-size:12px; overflow-x:auto;">CLICKJACKING VERIFIED: no X-Frame-Options or CSP frame-ancestors headers</pre></p>
+</div>
+  </div>
+
+  <div class="sec" style="opacity: 0.95;"><h2>2. Potential Vulnerabilities (Needs Refinement) (0)</h2>
+    <p style="font-size:13px; color:#475569; margin-bottom:12px;">These findings returned partial validation evidence but lacked concrete proof for automatic confirmation.</p>
+    <div style="overflow-x:auto">
+    <table><thead><tr><th>#</th><th>Vulnerability Type</th><th>Limitation / Missing Context</th></tr></thead>
+    <tbody><tr><td colspan="3" style="padding:20px;text-align:center;color:#6b7280">No potential vulnerabilities buffered.</td></tr></tbody></table></div>
+  </div>
+
+  <div class="sec" style="opacity: 0.8;"><h2>3. Rejected Findings (False Positives Mitigated) (2)</h2>
+    <p style="font-size:13px; color:#475569; margin-bottom:12px;">These findings were flagged by early detection but correctly rejected by explicit security logic checks.</p>
+    <div style="overflow-x:auto">
+    <table style="background: #fffafa;"><thead><tr><th>#</th><th>Analyzed Target</th><th>Rejection Justification</th></tr></thead>
+    <tbody><tr>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb;font-weight:600;color:#991b1b;">1</td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb"><strike><strong>SQLi Exploitation</strong></strike></td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb;font-size:13px;color:#64748b">Tool execution failed</td>
+</tr><tr>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb;font-weight:600;color:#991b1b;">2</td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb"><strike><strong>XSS Test</strong></strike></td>
+  <td style="padding:12px;border-bottom:1px solid #e5e7eb;font-size:13px;color:#64748b">Tool execution failed</td>
+</tr></tbody></table></div>
+  </div>
+
+  <div class="sec"><h2>MITRE ATT&CK Techniques</h2>
+    <div style="padding:8px 0"><span style="background:#eff6ff;color:#1d4ed8;padding:4px 10px;border-radius:4px;margin:3px;display:inline-block;font-size:13px"><strong>T1557</strong> — </span><span style="background:#eff6ff;color:#1d4ed8;padding:4px 10px;border-radius:4px;margin:3px;display:inline-block;font-size:13px"><strong>T1190</strong> — Exploit Public-Facing Application</span></div>
+    <p style="margin-top:16px;font-size:13px;color:#6b7280">Reference: <a href="https://attack.mitre.org" style="color:#1d4ed8">https://attack.mitre.org</a></p>
+  </div>
+  
+  <div class="sec"><h2>Pipeline Execution Context</h2>
+    <div class="ps"><div class="si">1</div><div><div class="sn">Reconnaissance Agent</div><div class="sd">ZAP 141 alerts (api) · 17 URLs</div></div></div>
+    <div class="ps"><div class="si">2</div><div><div class="sn">Vulnerability Analyst (MultiVer 4-Agent)</div><div class="sd">5 Candidates Assessed · 0 FP filtered early</div></div></div>
+    <div class="ps"><div class="si">3</div><div><div class="sn">Exploit Planner (EKB-Aware)</div><div class="sd">5 steps planned</div></div></div>
+    <div class="ps"><div class="si">4</div><div><div class="sn">Execution Agent</div><div class="sd">5 steps executed · Tool Execution Rate: 0%</div></div></div>
+    <div class="ps"><div class="si">4b</div><div><div class="sn">Critique Agent (Co-RedTeam)</div><div class="sd">Approved: 2 · Rejected: 0</div></div></div>
+    <div class="ps"><div class="si">4c</div><div><div class="sn">Sandbox Validator</div><div class="sd">Validated: 2 · Validation Rate: 40%</div></div></div>
+    <div class="ps"><div class="si">5</div><div><div class="sn">EKB Memory (FAISS)</div><div class="sd">0 experiences stored</div></div></div>
+    <div class="ps" style="background:#f0fdf4;border-color:#86efac"><div class="si" style="background:#166534">6</div>
+      <div><div class="sn">Report Agent (This Report)</div><div class="sd">HTML + ELK JSON · Strict Validation Mode</div></div></div>
+  </div>
+  <div class="ftr">
+    AI-Powered Multi-Agent Web Security Tester — Validation-Driven Report<br>
+    SRM Institute of Science and Technology &middot; Department of Computing Technologies<br>
+    Generated: 2026-04-24 23:01:46
+  </div>
+</div>
+</body>
+</html>

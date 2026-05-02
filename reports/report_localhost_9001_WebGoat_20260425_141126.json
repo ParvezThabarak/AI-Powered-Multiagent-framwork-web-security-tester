@@ -1,0 +1,2396 @@
+{
+  "target_url": "http://localhost:9001/WebGoat",
+  "target_ip": "localhost",
+  "recon": {
+    "target_url": "http://localhost:9001/WebGoat",
+    "target_ip": "localhost",
+    "web_server": "Unknown",
+    "open_ports": [
+      "135/tcp",
+      "445/tcp",
+      "902/tcp",
+      "912/tcp"
+    ],
+    "services": {
+      "http": "Unknown"
+    },
+    "found_paths": [],
+    "discovered_urls": [
+      "http://localhost:9001/WebGoat",
+      "http://localhost:9001/WebGoat/vulnerabilities/sqli/",
+      "http://localhost:9001/WebGoat/vulnerabilities/xss_r/",
+      "http://localhost:9001/WebGoat/vulnerabilities/brute/",
+      "http://localhost:9001/WebGoat/login.php",
+      "http://localhost:9001/WebGoat/setup.php",
+      "http://localhost:9001/WebGoat/security.php",
+      "http://localhost:9001/WebGoat/admin/",
+      "http://localhost:9001/WebGoat/phpmyadmin/",
+      "http://localhost:9001/WebGoat/css/main.css",
+      "http://localhost:9001/WebGoat/plugins/bootstrap/css/bootstrap.min.css",
+      "http://localhost:9001/WebGoat/css/font-awesome.min.css",
+      "http://localhost:9001/WebGoat/css/animate.css",
+      "http://localhost:9001/WebGoat/start.mvc",
+      "http://localhost:9001/WebGoat/registration",
+      "http://localhost:9001/WebGoat/login",
+      "http://localhost:9001/WebGoat/register.mvc"
+    ],
+    "discovered_forms": [
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/vulnerabilities/sqli/"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/vulnerabilities/xss_r/"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/vulnerabilities/brute/"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/login.php"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/setup.php"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/security.php"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/admin/"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/phpmyadmin/"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/start.mvc"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/register.mvc",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password",
+          "matchingPassword",
+          "agree"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/registration"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/login"
+      },
+      {
+        "action": "http://localhost:9001/WebGoat/login",
+        "method": "POST",
+        "inputs": [
+          "username",
+          "password"
+        ],
+        "source_page": "http://localhost:9001/WebGoat/register.mvc"
+      }
+    ],
+    "injectable_candidates": [
+      {
+        "url": "http://localhost:9001/rest/products/search?q=test",
+        "param": "q",
+        "method": "GET",
+        "vuln_types": [
+          "XSS",
+          "SQLi"
+        ],
+        "priority": "high"
+      },
+      {
+        "url": "http://localhost:9001/rest/products/search?id=test",
+        "param": "id",
+        "method": "GET",
+        "vuln_types": [
+          "XSS",
+          "SQLi"
+        ],
+        "priority": "high"
+      },
+      {
+        "url": "http://localhost:9001/rest/products/search?search=test",
+        "param": "search",
+        "method": "GET",
+        "vuln_types": [
+          "XSS",
+          "SQLi"
+        ],
+        "priority": "high"
+      },
+      {
+        "url": "http://localhost:9001/rest/user/login?q=test",
+        "param": "q",
+        "method": "GET",
+        "vuln_types": [
+          "XSS",
+          "SQLi"
+        ],
+        "priority": "high"
+      },
+      {
+        "url": "http://localhost:9001/rest/user/login?id=test",
+        "param": "id",
+        "method": "GET",
+        "vuln_types": [
+          "XSS",
+          "SQLi"
+        ],
+        "priority": "high"
+      },
+      {
+        "url": "http://localhost:9001/rest/user/login?search=test",
+        "param": "search",
+        "method": "GET",
+        "vuln_types": [
+          "XSS",
+          "SQLi"
+        ],
+        "priority": "high"
+      },
+      {
+        "url": "http://localhost:9001/rest/user/register?q=test",
+        "param": "q",
+        "method": "GET",
+        "vuln_types": [
+          "XSS",
+          "SQLi"
+        ],
+        "priority": "high"
+      },
+      {
+        "url": "http://localhost:9001/rest/user/register?id=test",
+        "param": "id",
+        "method": "GET",
+        "vuln_types": [
+          "XSS",
+          "SQLi"
+        ],
+        "priority": "high"
+      }
+    ],
+    "zap_alerts": [
+      {
+        "name": "Session Management Response Identified",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "JSESSIONID",
+        "cwe_id": "CWE--1",
+        "solution": "This is an informational alert rather than a vulnerability and so there is nothing to fix.",
+        "description": "The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. "
+      },
+      {
+        "name": "Cookie without SameSite Attribute",
+        "risk": "Low",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "JSESSIONID",
+        "cwe_id": "CWE-1275",
+        "solution": "Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.",
+        "description": "A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-sit"
+      },
+      {
+        "name": "X-Content-Type-Options Header Missing",
+        "risk": "Low",
+        "url": "http://localhost:9001/WebGoat/css/img/favicon.ico",
+        "param": "x-content-type-options",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.\nIf possible, ensure that the end u",
+        "description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially cau"
+      },
+      {
+        "name": "Session Management Response Identified",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "JSESSIONID",
+        "cwe_id": "CWE--1",
+        "solution": "This is an informational alert rather than a vulnerability and so there is nothing to fix.",
+        "description": "The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. "
+      },
+      {
+        "name": "Missing Anti-clickjacking Header",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "x-frame-options",
+        "cwe_id": "CWE-1021",
+        "solution": "Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.\nIf you expect the page to be framed only",
+        "description": "The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options."
+      },
+      {
+        "name": "Missing Anti-clickjacking Header",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/registration",
+        "param": "x-frame-options",
+        "cwe_id": "CWE-1021",
+        "solution": "Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.\nIf you expect the page to be framed only",
+        "description": "The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options."
+      },
+      {
+        "name": "Content Security Policy (CSP) Header Not Set",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.",
+        "description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks a"
+      },
+      {
+        "name": "Authentication Request Identified",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "username",
+        "cwe_id": "CWE--1",
+        "solution": "This is an informational alert rather than a vulnerability and so there is nothing to fix.",
+        "description": "The given request has been identified as an authentication request. The 'Other Info' field contains a set of key=value lines which identify any relevant fields. If the request is in a context which ha"
+      },
+      {
+        "name": "X-Content-Type-Options Header Missing",
+        "risk": "Low",
+        "url": "http://localhost:9001/WebGoat/css/font-awesome.min.css",
+        "param": "x-content-type-options",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.\nIf possible, ensure that the end u",
+        "description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially cau"
+      },
+      {
+        "name": "Content Security Policy (CSP) Header Not Set",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/registration",
+        "param": "",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.",
+        "description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks a"
+      },
+      {
+        "name": "Absence of Anti-CSRF Tokens",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "",
+        "cwe_id": "CWE-352",
+        "solution": "Phase: Architecture and Design\nUse a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.\nFor example, use anti-CSRF p",
+        "description": "No Anti-CSRF tokens were found in a HTML submission form.\nA cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowled"
+      },
+      {
+        "name": "Absence of Anti-CSRF Tokens",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/registration",
+        "param": "",
+        "cwe_id": "CWE-352",
+        "solution": "Phase: Architecture and Design\nUse a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.\nFor example, use anti-CSRF p",
+        "description": "No Anti-CSRF tokens were found in a HTML submission form.\nA cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowled"
+      },
+      {
+        "name": "X-Content-Type-Options Header Missing",
+        "risk": "Low",
+        "url": "http://localhost:9001/WebGoat/css/main.css",
+        "param": "x-content-type-options",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.\nIf possible, ensure that the end u",
+        "description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially cau"
+      },
+      {
+        "name": "X-Content-Type-Options Header Missing",
+        "risk": "Low",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "x-content-type-options",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.\nIf possible, ensure that the end u",
+        "description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially cau"
+      },
+      {
+        "name": "X-Content-Type-Options Header Missing",
+        "risk": "Low",
+        "url": "http://localhost:9001/WebGoat/registration",
+        "param": "x-content-type-options",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.\nIf possible, ensure that the end u",
+        "description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially cau"
+      },
+      {
+        "name": "X-Content-Type-Options Header Missing",
+        "risk": "Low",
+        "url": "http://localhost:9001/WebGoat/css/animate.css",
+        "param": "x-content-type-options",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.\nIf possible, ensure that the end u",
+        "description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially cau"
+      },
+      {
+        "name": "X-Content-Type-Options Header Missing",
+        "risk": "Low",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css/bootstrap.min.css",
+        "param": "x-content-type-options",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.\nIf possible, ensure that the end u",
+        "description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially cau"
+      },
+      {
+        "name": "Missing Anti-clickjacking Header",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/login?error",
+        "param": "x-frame-options",
+        "cwe_id": "CWE-1021",
+        "solution": "Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.\nIf you expect the page to be framed only",
+        "description": "The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options."
+      },
+      {
+        "name": "Missing Anti-clickjacking Header",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/register.mvc",
+        "param": "x-frame-options",
+        "cwe_id": "CWE-1021",
+        "solution": "Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.\nIf you expect the page to be framed only",
+        "description": "The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options."
+      },
+      {
+        "name": "Content Security Policy (CSP) Header Not Set",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/login?error",
+        "param": "",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.",
+        "description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks a"
+      },
+      {
+        "name": "Content Security Policy (CSP) Header Not Set",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/register.mvc",
+        "param": "",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.",
+        "description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks a"
+      },
+      {
+        "name": "Absence of Anti-CSRF Tokens",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/login?error",
+        "param": "",
+        "cwe_id": "CWE-352",
+        "solution": "Phase: Architecture and Design\nUse a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.\nFor example, use anti-CSRF p",
+        "description": "No Anti-CSRF tokens were found in a HTML submission form.\nA cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowled"
+      },
+      {
+        "name": "Absence of Anti-CSRF Tokens",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/register.mvc",
+        "param": "",
+        "cwe_id": "CWE-352",
+        "solution": "Phase: Architecture and Design\nUse a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.\nFor example, use anti-CSRF p",
+        "description": "No Anti-CSRF tokens were found in a HTML submission form.\nA cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowled"
+      },
+      {
+        "name": "User Controllable HTML Element Attribute (Potential XSS)",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/register.mvc",
+        "param": "matchingPassword",
+        "cwe_id": "CWE-20",
+        "solution": "Validate all input and sanitize output it before writing to any HTML attributes.",
+        "description": "This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-si"
+      },
+      {
+        "name": "User Controllable HTML Element Attribute (Potential XSS)",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/register.mvc",
+        "param": "password",
+        "cwe_id": "CWE-20",
+        "solution": "Validate all input and sanitize output it before writing to any HTML attributes.",
+        "description": "This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-si"
+      },
+      {
+        "name": "User Controllable HTML Element Attribute (Potential XSS)",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/register.mvc",
+        "param": "username",
+        "cwe_id": "CWE-20",
+        "solution": "Validate all input and sanitize output it before writing to any HTML attributes.",
+        "description": "This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-si"
+      },
+      {
+        "name": "X-Content-Type-Options Header Missing",
+        "risk": "Low",
+        "url": "http://localhost:9001/WebGoat/login?error",
+        "param": "x-content-type-options",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.\nIf possible, ensure that the end u",
+        "description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially cau"
+      },
+      {
+        "name": "User Controllable HTML Element Attribute (Potential XSS)",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/register.mvc",
+        "param": "agree",
+        "cwe_id": "CWE-20",
+        "solution": "Validate all input and sanitize output it before writing to any HTML attributes.",
+        "description": "This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-si"
+      },
+      {
+        "name": "User Controllable HTML Element Attribute (Potential XSS)",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/register.mvc",
+        "param": "agree",
+        "cwe_id": "CWE-20",
+        "solution": "Validate all input and sanitize output it before writing to any HTML attributes.",
+        "description": "This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-si"
+      },
+      {
+        "name": "X-Content-Type-Options Header Missing",
+        "risk": "Low",
+        "url": "http://localhost:9001/WebGoat/register.mvc",
+        "param": "x-content-type-options",
+        "cwe_id": "CWE-693",
+        "solution": "Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.\nIf possible, ensure that the end u",
+        "description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially cau"
+      },
+      {
+        "name": "Spring Actuator Information Leak",
+        "risk": "Medium",
+        "url": "http://localhost:9001/WebGoat/actuator/health",
+        "param": "",
+        "cwe_id": "CWE-215",
+        "solution": "Disable the Health Actuators and other actuators, or restrict them to administrative users.",
+        "description": "Spring Actuator for Health is enabled and may reveal sensitive information about this application. Spring Actuators can be used for real monitoring purposes, but should be used with caution as to not "
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/register.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/login",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/css/img",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/plugins/bootstrap/css",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat/start.mvc",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      },
+      {
+        "name": "User Agent Fuzzer",
+        "risk": "Informational",
+        "url": "http://localhost:9001/WebGoat",
+        "param": "Header User-Agent",
+        "cwe_id": "CWE-0",
+        "solution": "",
+        "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the orig"
+      }
+    ],
+    "zap_risk_counts": {
+      "Informational": 117,
+      "Low": 10,
+      "Medium": 13
+    },
+    "potential_vulns": [
+      {
+        "type": "Missing Anti-clickjacking Header",
+        "location": "http://localhost:9001/WebGoat/login",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-1021",
+        "param": "x-frame-options"
+      },
+      {
+        "type": "Missing Anti-clickjacking Header",
+        "location": "http://localhost:9001/WebGoat/registration",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-1021",
+        "param": "x-frame-options"
+      },
+      {
+        "type": "Content Security Policy (CSP) Header Not Set",
+        "location": "http://localhost:9001/WebGoat/login",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-693",
+        "param": ""
+      },
+      {
+        "type": "Content Security Policy (CSP) Header Not Set",
+        "location": "http://localhost:9001/WebGoat/registration",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-693",
+        "param": ""
+      },
+      {
+        "type": "Absence of Anti-CSRF Tokens",
+        "location": "http://localhost:9001/WebGoat/login",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-352",
+        "param": ""
+      },
+      {
+        "type": "Absence of Anti-CSRF Tokens",
+        "location": "http://localhost:9001/WebGoat/registration",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-352",
+        "param": ""
+      },
+      {
+        "type": "Missing Anti-clickjacking Header",
+        "location": "http://localhost:9001/WebGoat/login?error",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-1021",
+        "param": "x-frame-options"
+      },
+      {
+        "type": "Missing Anti-clickjacking Header",
+        "location": "http://localhost:9001/WebGoat/register.mvc",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-1021",
+        "param": "x-frame-options"
+      },
+      {
+        "type": "Content Security Policy (CSP) Header Not Set",
+        "location": "http://localhost:9001/WebGoat/login?error",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-693",
+        "param": ""
+      },
+      {
+        "type": "Content Security Policy (CSP) Header Not Set",
+        "location": "http://localhost:9001/WebGoat/register.mvc",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-693",
+        "param": ""
+      },
+      {
+        "type": "Absence of Anti-CSRF Tokens",
+        "location": "http://localhost:9001/WebGoat/login?error",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-352",
+        "param": ""
+      },
+      {
+        "type": "Absence of Anti-CSRF Tokens",
+        "location": "http://localhost:9001/WebGoat/register.mvc",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-352",
+        "param": ""
+      },
+      {
+        "type": "Spring Actuator Information Leak",
+        "location": "http://localhost:9001/WebGoat/actuator/health",
+        "severity": "medium",
+        "source": "zap",
+        "cwe_id": "CWE-215",
+        "param": ""
+      }
+    ],
+    "recommended_exploits": [],
+    "risk_level": "medium",
+    "zap_source": "api"
+  },
+  "analysis": {
+    "target_url": "http://localhost:9001/WebGoat",
+    "web_server": "Unknown",
+    "confirmed_count": 3,
+    "false_positive_count": 0,
+    "critical_high_count": 1,
+    "vuln_summary": [
+      {
+        "vuln_type": "Misconfiguration",
+        "severity": "medium",
+        "confidence": 0.835,
+        "owasp": "A06_Security_Misconfiguration",
+        "exploitability": "easy",
+        "impact_types": [
+          "data_breach",
+          "session_hijacking"
+        ],
+        "priority": "high",
+        "cve_ids": [],
+        "mitre_technique": "T1557",
+        "mitre_name": "Adversary-in-the-Middle",
+        "cwe_id": "CWE-346",
+        "remediation": "Add the X-Frame-Options header to prevent clickjacking attacks, for example: X-Frame-Options: DENY",
+        "location": "http://localhost:9001/WebGoat/login",
+        "param": "x-frame-options",
+        "finding": "ZAP [Medium] Missing Anti-clickjacking Header at http://localhost:9001/WebGoat/login param='x-frame-options' Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP",
+        "difficulty_score": 0.198,
+        "curriculum_tier": "simple",
+        "difficulty": "simple",
+        "score_components": {
+          "AC": 0.0,
+          "UI": 0.0,
+          "PR": 0.0,
+          "ES": 0.66
+        },
+        "tier_label": "Simple  (D < 0.30)"
+      },
+      {
+        "vuln_type": "CSRF",
+        "severity": "medium",
+        "confidence": 0.835,
+        "owasp": "A05_Security_Misconfiguration",
+        "exploitability": "easy",
+        "impact_types": [
+          "data_breach",
+          "unauthorized_access"
+        ],
+        "priority": "high",
+        "cve_ids": [],
+        "mitre_technique": "T1202",
+        "mitre_name": "Token Impersonation",
+        "cwe_id": "CWE-352",
+        "remediation": "Implement anti-CSRF tokens using a vetted library or framework",
+        "location": "http://localhost:9001/WebGoat/login",
+        "param": "",
+        "finding": "ZAP [Medium] Absence of Anti-CSRF Tokens at http://localhost:9001/WebGoat/login param='' Phase: Architecture and Design\nUse a vetted library or framework that does not a",
+        "difficulty_score": 0.548,
+        "curriculum_tier": "medium",
+        "difficulty": "medium",
+        "score_components": {
+          "AC": 0.5,
+          "UI": 1.0,
+          "PR": 0.0,
+          "ES": 0.66
+        },
+        "tier_label": "Medium  (0.30 \u2264 D < 0.60)"
+      },
+      {
+        "vuln_type": "XSS",
+        "severity": "high",
+        "confidence": 0.59,
+        "owasp": "A03_Injection",
+        "exploitability": "easy",
+        "impact_types": [
+          "data_breach",
+          "unauthorised_access"
+        ],
+        "priority": "high",
+        "cve_ids": [],
+        "mitre_technique": "T1190",
+        "mitre_name": "Exploitation for Client Execution",
+        "cwe_id": "CWE-89",
+        "remediation": "Validate and sanitize user input for the 'q' parameter to prevent XSS and SQLi attacks",
+        "location": "http://localhost:9001/rest/products/search?q=test",
+        "param": "q",
+        "finding": "Parameterised URL: param 'q' at http://localhost:9001/rest/products/search?q=test \u2014 XSS, SQLi",
+        "difficulty_score": 0.5,
+        "curriculum_tier": "medium",
+        "difficulty": "medium",
+        "score_components": {
+          "AC": 0.0,
+          "UI": 1.0,
+          "PR": 0.0,
+          "ES": 1.0
+        },
+        "tier_label": "Medium  (0.30 \u2264 D < 0.60)"
+      }
+    ],
+    "all_analyses": [
+      {
+        "finding": "ZAP [Medium] Missing Anti-clickjacking Header at http://localhost:9001/WebGoat/login param='x-frame-options' Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP",
+        "location": "http://localhost:9001/WebGoat/login",
+        "param": "x-frame-options",
+        "verdict": {
+          "is_confirmed": true,
+          "is_false_positive": false,
+          "confidence": 0.835,
+          "vote_score": 0.975,
+          "severity": "medium",
+          "vuln_type": "Misconfiguration",
+          "owasp": "A06_Security_Misconfiguration",
+          "exploitability": "easy",
+          "impact_types": [
+            "data_breach",
+            "session_hijacking"
+          ],
+          "priority": "high",
+          "cve_ids": [],
+          "mitre_technique": "T1557",
+          "mitre_name": "Adversary-in-the-Middle",
+          "cwe_id": "CWE-346",
+          "remediation": "Add the X-Frame-Options header to prevent clickjacking attacks, for example: X-Frame-Options: DENY"
+        },
+        "security_analysis": {
+          "is_vulnerable": true,
+          "vuln_type": "Misconfiguration",
+          "severity": "medium",
+          "owasp": "A06_Security_Misconfiguration",
+          "confidence": 0.8,
+          "reasoning": "The target application is missing the X-Frame-Options header, which makes it vulnerable to clickjacking attacks. This is a configuration issue that can be exploited by an attacker to trick users into performing unintended actions.",
+          "agent_role": "security"
+        },
+        "correctness_check": {
+          "is_real_finding": true,
+          "false_positive_risk": "low",
+          "evidence_quality": "strong",
+          "confidence": 0.9,
+          "reasoning": "The scanner has identified a missing X-Frame-Options header, which is a common and well-known vulnerability that can lead to clickjacking attacks. The evidence provided is clear and specific, indicating a genuine vulnerability.",
+          "agent_role": "correctness"
+        },
+        "performance_eval": {
+          "exploitability": "easy",
+          "impact_type": [
+            "data_breach",
+            "session_hijacking"
+          ],
+          "attack_complexity": "low",
+          "priority": "high",
+          "confidence": 0.8,
+          "reasoning": "The missing X-Frame-Options header makes the application vulnerable to clickjacking attacks, allowing an attacker to trick users into performing unintended actions.",
+          "agent_role": "performance"
+        },
+        "cve_mapping": {
+          "cve_ids": [],
+          "mitre_technique": "T1557",
+          "mitre_name": "Adversary-in-the-Middle",
+          "cwe_id": "CWE-346",
+          "remediation": "Add the X-Frame-Options header to prevent clickjacking attacks, for example: X-Frame-Options: DENY",
+          "confidence": 0.8,
+          "reasoning": "The missing X-Frame-Options header allows an attacker to potentially perform a clickjacking attack by framing the vulnerable page, which aligns with the MITRE ATT&CK technique T1557 and CWE-346",
+          "agent_role": "cve_mapper"
+        }
+      },
+      {
+        "finding": "ZAP [Medium] Absence of Anti-CSRF Tokens at http://localhost:9001/WebGoat/login param='' Phase: Architecture and Design\nUse a vetted library or framework that does not a",
+        "location": "http://localhost:9001/WebGoat/login",
+        "param": "",
+        "verdict": {
+          "is_confirmed": true,
+          "is_false_positive": false,
+          "confidence": 0.835,
+          "vote_score": 0.975,
+          "severity": "medium",
+          "vuln_type": "CSRF",
+          "owasp": "A05_Security_Misconfiguration",
+          "exploitability": "easy",
+          "impact_types": [
+            "data_breach",
+            "unauthorized_access"
+          ],
+          "priority": "high",
+          "cve_ids": [],
+          "mitre_technique": "T1202",
+          "mitre_name": "Token Impersonation",
+          "cwe_id": "CWE-352",
+          "remediation": "Implement anti-CSRF tokens using a vetted library or framework"
+        },
+        "security_analysis": {
+          "is_vulnerable": true,
+          "vuln_type": "CSRF",
+          "severity": "medium",
+          "owasp": "A05_Security_Misconfiguration",
+          "confidence": 0.8,
+          "reasoning": "The absence of Anti-CSRF tokens in the login page allows an attacker to perform Cross-Site Request Forgery attacks, which can lead to unauthorized actions on behalf of the user.",
+          "agent_role": "security"
+        },
+        "correctness_check": {
+          "is_real_finding": true,
+          "false_positive_risk": "low",
+          "evidence_quality": "strong",
+          "confidence": 0.9,
+          "reasoning": "The scanner has identified a specific location and parameter where Anti-CSRF tokens are absent, which is a common and well-known vulnerability. The fact that it's a WebGoat application, known for being a deliberately insecure web application, further supports the finding.",
+          "agent_role": "correctness"
+        },
+        "performance_eval": {
+          "exploitability": "easy",
+          "impact_type": [
+            "data_breach",
+            "unauthorized_access"
+          ],
+          "attack_complexity": "low",
+          "priority": "high",
+          "confidence": 0.8,
+          "reasoning": "The absence of Anti-CSRF tokens makes the application vulnerable to Cross-Site Request Forgery attacks, allowing an attacker to perform unauthorized actions on behalf of a legitimate user.",
+          "agent_role": "performance"
+        },
+        "cve_mapping": {
+          "cve_ids": [],
+          "mitre_technique": "T1202",
+          "mitre_name": "Token Impersonation",
+          "cwe_id": "CWE-352",
+          "remediation": "Implement anti-CSRF tokens using a vetted library or framework",
+          "confidence": 0.8,
+          "reasoning": "The absence of anti-CSRF tokens in the login page allows an attacker to perform a Cross-Site Request Forgery (CSRF) attack, which aligns with the MITRE ATT&CK technique T1202 and CWE-352",
+          "agent_role": "cve_mapper"
+        }
+      },
+      {
+        "finding": "Parameterised URL: param 'q' at http://localhost:9001/rest/products/search?q=test \u2014 XSS, SQLi",
+        "location": "http://localhost:9001/rest/products/search?q=test",
+        "param": "q",
+        "verdict": {
+          "is_confirmed": true,
+          "is_false_positive": false,
+          "confidence": 0.59,
+          "vote_score": 0.625,
+          "severity": "high",
+          "vuln_type": "XSS",
+          "owasp": "A03_Injection",
+          "exploitability": "easy",
+          "impact_types": [
+            "data_breach",
+            "unauthorised_access"
+          ],
+          "priority": "high",
+          "cve_ids": [],
+          "mitre_technique": "T1190",
+          "mitre_name": "Exploitation for Client Execution",
+          "cwe_id": "CWE-89",
+          "remediation": "Validate and sanitize user input for the 'q' parameter to prevent XSS and SQLi attacks"
+        },
+        "security_analysis": {
+          "is_vulnerable": true,
+          "vuln_type": "XSS",
+          "severity": "high",
+          "owasp": "A03_Injection",
+          "confidence": 0.8,
+          "reasoning": "The finding indicates a potential XSS vulnerability in the 'q' parameter of the URL, which could allow an attacker to inject malicious JavaScript code.",
+          "agent_role": "security"
+        },
+        "correctness_check": {
+          "is_real_finding": false,
+          "false_positive_risk": "high",
+          "evidence_quality": "weak",
+          "confidence": 0.2,
+          "reasoning": "The scanner has flagged a parameterised URL as vulnerable to XSS and SQLi, but the evidence provided only shows a simple query parameter. There is no indication of malicious input or actual vulnerability exploitation. This finding appears to be a generic warning based on the presence of a query parameter, rather than a specific vulnerability.",
+          "agent_role": "correctness"
+        },
+        "performance_eval": {
+          "exploitability": "easy",
+          "impact_type": [
+            "data_breach",
+            "unauthorised_access"
+          ],
+          "attack_complexity": "low",
+          "priority": "high",
+          "confidence": 0.8,
+          "reasoning": "The parameter 'q' is vulnerable to XSS and SQLi attacks, allowing an attacker to inject malicious code and potentially extract or modify sensitive data. The fact that it's a parameterised URL makes it easily exploitable.",
+          "agent_role": "performance"
+        },
+        "cve_mapping": {
+          "cve_ids": [],
+          "mitre_technique": "T1190",
+          "mitre_name": "Exploitation for Client Execution",
+          "cwe_id": "CWE-89",
+          "remediation": "Validate and sanitize user input for the 'q' parameter to prevent XSS and SQLi attacks",
+          "confidence": 0.8,
+          "reasoning": "The finding indicates a potential XSS and SQLi vulnerability in the 'q' parameter of the /rest/products/search endpoint. This is a common attack vector, and without proper input validation and sanitization, an attacker could inject malicious code or SQL queries.",
+          "agent_role": "cve_mapper"
+        }
+      }
+    ],
+    "ensemble_method": "MultiVer 4-agent weighted vote",
+    "weights": {
+      "security": 0.45,
+      "correctness": 0.35,
+      "performance": 0.15,
+      "cve_mapper": 0.05
+    },
+    "recon_summary": {
+      "injectable_candidates": [
+        {
+          "url": "http://localhost:9001/rest/products/search?q=test",
+          "param": "q",
+          "method": "GET",
+          "vuln_types": [
+            "XSS",
+            "SQLi"
+          ],
+          "priority": "high"
+        },
+        {
+          "url": "http://localhost:9001/rest/products/search?id=test",
+          "param": "id",
+          "method": "GET",
+          "vuln_types": [
+            "XSS",
+            "SQLi"
+          ],
+          "priority": "high"
+        },
+        {
+          "url": "http://localhost:9001/rest/products/search?search=test",
+          "param": "search",
+          "method": "GET",
+          "vuln_types": [
+            "XSS",
+            "SQLi"
+          ],
+          "priority": "high"
+        },
+        {
+          "url": "http://localhost:9001/rest/user/login?q=test",
+          "param": "q",
+          "method": "GET",
+          "vuln_types": [
+            "XSS",
+            "SQLi"
+          ],
+          "priority": "high"
+        },
+        {
+          "url": "http://localhost:9001/rest/user/login?id=test",
+          "param": "id",
+          "method": "GET",
+          "vuln_types": [
+            "XSS",
+            "SQLi"
+          ],
+          "priority": "high"
+        },
+        {
+          "url": "http://localhost:9001/rest/user/login?search=test",
+          "param": "search",
+          "method": "GET",
+          "vuln_types": [
+            "XSS",
+            "SQLi"
+          ],
+          "priority": "high"
+        },
+        {
+          "url": "http://localhost:9001/rest/user/register?q=test",
+          "param": "q",
+          "method": "GET",
+          "vuln_types": [
+            "XSS",
+            "SQLi"
+          ],
+          "priority": "high"
+        },
+        {
+          "url": "http://localhost:9001/rest/user/register?id=test",
+          "param": "id",
+          "method": "GET",
+          "vuln_types": [
+            "XSS",
+            "SQLi"
+          ],
+          "priority": "high"
+        }
+      ],
+      "found_paths": [],
+      "web_server": "Unknown",
+      "zap_risk_counts": {
+        "Informational": 117,
+        "Low": 10,
+        "Medium": 13
+      }
+    },
+    "curriculum_summary": {
+      "total_scored": 3,
+      "simple_count": 1,
+      "medium_count": 2,
+      "complex_count": 0,
+      "average_score": 0.415,
+      "recommended_start": "simple",
+      "tier_label": "Simple  (D < 0.30)",
+      "formula": "D = 0.3\u00b7AC + 0.2\u00b7UI + 0.2\u00b7PR + 0.3\u00b7ES",
+      "source": "CurriculumPT (Beijing Jiaotong 2025)"
+    }
+  },
+  "curriculum": {
+    "total_scored": 3,
+    "simple_count": 1,
+    "medium_count": 2,
+    "complex_count": 0,
+    "average_score": 0.415,
+    "recommended_start": "simple",
+    "tier_label": "Simple  (D < 0.30)",
+    "formula": "D = 0.3\u00b7AC + 0.2\u00b7UI + 0.2\u00b7PR + 0.3\u00b7ES",
+    "source": "CurriculumPT (Beijing Jiaotong 2025)"
+  },
+  "plan": {
+    "target_summary": "WebGoat localhost target with confirmed XSS, Misconfiguration, and CSRF vulnerabilities",
+    "owasp_categories": [
+      "A03_Injection",
+      "A05_Security_Misconfiguration",
+      "A06_Security_Misconfiguration"
+    ],
+    "difficulty": "simple",
+    "attack_vector": "XSS exploitation via http_probe, followed by CSRF and Misconfiguration analysis",
+    "steps": [
+      {
+        "step_id": 1,
+        "name": "XSS Test",
+        "description": "Test for XSS vulnerability using http_probe",
+        "tool": "http_probe",
+        "target_url": "http://localhost:9001/WebGoat/register.mvc?matchingPassword=<script>alert(1)</script>",
+        "target_param": "q",
+        "command_hint": "http_probe url=http://localhost:9001/WebGoat/register.mvc?matchingPassword=<script>alert(1)</script>",
+        "expected_outcome": "Alert box pops up, indicating successful XSS exploitation",
+        "owasp": "A03_Injection",
+        "mitre_technique": "T1190",
+        "requires_human_approval": false,
+        "payloads": [
+          "\"><img/**/src=x/**/onerror=alert(1)>",
+          "<script>alert(1)</script>",
+          "\"><img src=x onerror=alert(1)>"
+        ]
+      },
+      {
+        "step_id": 2,
+        "name": "CSRF Test",
+        "description": "Test for CSRF vulnerability",
+        "tool": "http_probe",
+        "target_url": "http://localhost:9001/WebGoat/login",
+        "target_param": "",
+        "command_hint": "http_probe url=http://localhost:9001/WebGoat/login",
+        "expected_outcome": "Successful login without token, indicating CSRF vulnerability",
+        "owasp": "A05_Security_Misconfiguration",
+        "mitre_technique": "T1202",
+        "requires_human_approval": false
+      },
+      {
+        "step_id": 3,
+        "name": "Misconfiguration Analysis [Clickjacking]",
+        "description": "Analyze x-frame-options parameter for Misconfiguration [CORRECTED to registration endpoint]",
+        "tool": "http_probe",
+        "target_url": "http://localhost:9001/WebGoat/registration",
+        "target_param": "x-frame-options",
+        "command_hint": "http_probe url=http://localhost:9001/WebGoat/registration",
+        "expected_outcome": "Missing or inadequate x-frame-options header, indicating Misconfiguration",
+        "owasp": "A06_Security_Misconfiguration",
+        "mitre_technique": "T1557",
+        "requires_human_approval": false
+      }
+    ],
+    "estimated_success_rate": 0.83,
+    "notes": "Prioritizing strategies that previously succeeded, such as CSRF Test"
+  },
+  "execution": {
+    "plan_name": "WebGoat localhost target with confirmed XSS, Misconfiguration, and CSRF vulnerabilities",
+    "difficulty": "simple",
+    "total_steps": 3,
+    "successful_steps": 2,
+    "failed_steps": 1,
+    "validated_steps": 1,
+    "tool_execution_rate": 0.6666666666666666,
+    "exploit_validation_rate": 0.3333333333333333,
+    "success_rate": 0.6666666666666666,
+    "total_time_seconds": 23.043053150177002,
+    "tool_calls_used": 4,
+    "findings": [
+      "CSRF ANALYSIS: Form found WITHOUT CSRF token. State-changing=True. Token detected=False. Body: <!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <title>Login Page</title>\n    <link rel=\"shortcut icon\" href=\"/WebGoat/css/img/",
+      "SECURITY HEADERS MISSING: CSP=ABSENT, X-Frame-Options=ABSENT. Server: unknown"
+    ],
+    "step_results": [
+      {
+        "step_id": 1,
+        "name": "XSS Test",
+        "status": "failed",
+        "attempts": 2,
+        "findings": [],
+        "tool_outputs": [
+          {
+            "tool": "http_probe",
+            "args": {
+              "url": "http://localhost:9001/WebGoat/register.mvc?matchingPassword=<script>alert(1)</script>"
+            },
+            "output": {
+              "success": true,
+              "stdout": "HTTP/1.1 400 \nContent-Type: text/html;charset=utf-8\nContent-Language: en\nContent-Length: 2163\nDate: Sat, 25 Apr 2026 08:40:58 GMT\nConnection: close",
+              "stderr": "",
+              "return_code": 0,
+              "command": "curl -s -I --max-time 10 http://localhost:9001/WebGoat/register.mvc?matchingPassword=<script>alert(1)</script>",
+              "timestamp": "2026-04-25T14:10:58.146585",
+              "probe_type": "http_headers_and_body",
+              "target_url": "http://localhost:9001/WebGoat/register.mvc?matchingPassword=<script>alert(1)</script>",
+              "headers": {
+                "Content-Type": "text/html;charset=utf-8",
+                "Content-Language": "en",
+                "Content-Length": "2163",
+                "Date": "Sat, 25 Apr 2026 08:40:58 GMT",
+                "Connection": "close"
+              },
+              "is_json_response": false,
+              "body": "<!doctype html><html lang=\"en\"><head><title>HTTP Status 400 \u2013 Bad Request</title><style type=\"text/css\">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 400 \u2013 Bad Request</h1><hr class=\"line\" /><p><b>Type</b> Exception Report</p><p><b>Message</b> Invalid character found in the request target [&#47;WebGoat&#47;register.mvc?matchingPassword=&lt;script&gt;alert(1)&lt;&#47;script&gt; ]. The valid characters are defined in RFC 7230 and RFC 3986</p><p><b>Description</b> The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).</p><p><b>Exception</b></p><pre>java.lang.IllegalArgumentException: Invalid character found in the request target [&#47;WebGoat&#47;register.mvc?matchingPassword=&lt;script&gt;alert(1)&lt;&#47;script&gt; ]. The valid characters are defined in RFC 7230 and RFC 3986\n\torg.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:484)\n\torg.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270)\n\torg.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\n\torg.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)\n\torg.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)\n\torg.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\n\torg.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\n\torg.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\torg.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\n\tjava.base&#47;java.lang.Thread.run(Thread.java:1575)\n</pre><p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p><hr class=\"line\" /><h3>Apache Tomcat/10.1.36</h3></body></html>",
+              "lfi_detected": false,
+              "xss_reflected": true,
+              "server_in_body": true
+            }
+          },
+          {
+            "tool": "http_probe",
+            "args": {
+              "url": "http://localhost:9001/WebGoat/register.mvc?matchingPassword=<script>alert(1)</script>"
+            },
+            "output": {
+              "success": true,
+              "stdout": "HTTP/1.1 400 \nContent-Type: text/html;charset=utf-8\nContent-Language: en\nContent-Length: 2163\nDate: Sat, 25 Apr 2026 08:41:06 GMT\nConnection: close",
+              "stderr": "",
+              "return_code": 0,
+              "command": "curl -s -I --max-time 10 http://localhost:9001/WebGoat/register.mvc?matchingPassword=<script>alert(1)</script>",
+              "timestamp": "2026-04-25T14:11:06.937123",
+              "probe_type": "http_headers_and_body",
+              "target_url": "http://localhost:9001/WebGoat/register.mvc?matchingPassword=<script>alert(1)</script>",
+              "headers": {
+                "Content-Type": "text/html;charset=utf-8",
+                "Content-Language": "en",
+                "Content-Length": "2163",
+                "Date": "Sat, 25 Apr 2026 08:41:06 GMT",
+                "Connection": "close"
+              },
+              "is_json_response": false,
+              "body": "<!doctype html><html lang=\"en\"><head><title>HTTP Status 400 \u2013 Bad Request</title><style type=\"text/css\">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 400 \u2013 Bad Request</h1><hr class=\"line\" /><p><b>Type</b> Exception Report</p><p><b>Message</b> Invalid character found in the request target [&#47;WebGoat&#47;register.mvc?matchingPassword=&lt;script&gt;alert(1)&lt;&#47;script&gt; ]. The valid characters are defined in RFC 7230 and RFC 3986</p><p><b>Description</b> The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).</p><p><b>Exception</b></p><pre>java.lang.IllegalArgumentException: Invalid character found in the request target [&#47;WebGoat&#47;register.mvc?matchingPassword=&lt;script&gt;alert(1)&lt;&#47;script&gt; ]. The valid characters are defined in RFC 7230 and RFC 3986\n\torg.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:484)\n\torg.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270)\n\torg.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\n\torg.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)\n\torg.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)\n\torg.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\n\torg.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\n\torg.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\torg.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\n\tjava.base&#47;java.lang.Thread.run(Thread.java:1575)\n</pre><p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p><hr class=\"line\" /><h3>Apache Tomcat/10.1.36</h3></body></html>",
+              "lfi_detected": false,
+              "xss_reflected": true,
+              "server_in_body": true
+            }
+          }
+        ],
+        "timestamp": "2026-04-25T14:10:57.425784"
+      },
+      {
+        "step_id": 2,
+        "name": "CSRF Test",
+        "status": "success",
+        "attempts": 1,
+        "findings": [
+          "CSRF ANALYSIS: Form found WITHOUT CSRF token. State-changing=True. Token detected=False. Body: <!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <title>Login Page</title>\n    <link rel=\"shortcut icon\" href=\"/WebGoat/css/img/"
+        ],
+        "tool_outputs": [
+          {
+            "tool": "http_probe",
+            "args": {
+              "url": "http://localhost:9001/WebGoat/login"
+            },
+            "output": {
+              "success": true,
+              "stdout": "HTTP/1.1 200 \nContent-Type: text/html;charset=UTF-8\nContent-Language: en-US\nDate: Sat, 25 Apr 2026 08:41:12 GMT",
+              "stderr": "",
+              "return_code": 0,
+              "command": "curl -s -I --max-time 10 http://localhost:9001/WebGoat/login",
+              "timestamp": "2026-04-25T14:11:12.718410",
+              "probe_type": "http_headers_and_body",
+              "target_url": "http://localhost:9001/WebGoat/login",
+              "headers": {
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Language": "en-US",
+                "Date": "Sat, 25 Apr 2026 08:41:12 GMT"
+              },
+              "is_json_response": false,
+              "body": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <title>Login Page</title>\n    <link rel=\"shortcut icon\" href=\"/WebGoat/css/img/favicon.ico\" type=\"image/x-icon\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/WebGoat/css/main.css\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/WebGoat/plugins/bootstrap/css/bootstrap.min.css\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/WebGoat/css/font-awesome.min.css\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/WebGoat/css/animate.css\"/>\n</head>\n<body>\n<section id=\"container\">\n    <header id=\"header\">\n        <div class=\"brand\">\n            <a href=\"/WebGoat/start.mvc\" class=\"logo\"><span>Web</span>Goat</a>\n        </div>\n        <div class=\"lessonTitle\">\n        </div>\n\n    </header>\n    <section class=\"main-content-wrapper\">\n\n        <section id=\"main-content\">\n            \n            \n            <br/><br/>\n            <form action=\"/WebGoat/login\" method='POST' style=\"width: 200px;\">\n                <div class=\"form-group\">\n                    <label for=\"exampleInputEmail1\">Username</label>\n                    <input autofocus=\"dummy_for_thymeleaf_parser\" type=\"text\" class=\"form-control\"\n                           id=\"exampleInputEmail1\" placeholder=\"Username\" name='username' />\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"exampleInputPassword1\">Password</label>\n                    <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Password\"\n                           name='password' />\n                </div>\n                <button class=\"btn btn-primary btn-block\" type=\"submit\">Sign in</button>\n                <div class=\"text-center\"><a href=\"/WebGoat/registration\">or register yourself as a new user</a></div>\n            </form>\n            <br/><br/>\n            \n        </section>\n    </section>\n</section>\n\n\n</body>\n</html>",
+              "lfi_detected": false,
+              "xss_reflected": "",
+              "server_in_body": false
+            }
+          }
+        ],
+        "timestamp": "2026-04-25T14:11:07.975248",
+        "sandbox_verified": true,
+        "sandbox_evidence": "CSRF VERIFIED: state-changing form found without CSRF token"
+      },
+      {
+        "step_id": 3,
+        "name": "Misconfiguration Analysis [Clickjacking]",
+        "status": "success",
+        "attempts": 1,
+        "findings": [
+          "SECURITY HEADERS MISSING: CSP=ABSENT, X-Frame-Options=ABSENT. Server: unknown"
+        ],
+        "tool_outputs": [
+          {
+            "tool": "http_probe",
+            "args": {
+              "url": "http://localhost:9001/WebGoat/registration"
+            },
+            "output": {
+              "success": true,
+              "stdout": "HTTP/1.1 200 \nContent-Type: text/html;charset=UTF-8\nContent-Language: en-US\nDate: Sat, 25 Apr 2026 08:41:19 GMT",
+              "stderr": "",
+              "return_code": 0,
+              "command": "curl -s -I --max-time 10 http://localhost:9001/WebGoat/registration",
+              "timestamp": "2026-04-25T14:11:19.428977",
+              "probe_type": "http_headers_and_body",
+              "target_url": "http://localhost:9001/WebGoat/registration",
+              "headers": {
+                "Content-Type": "text/html;charset=UTF-8",
+                "Content-Language": "en-US",
+                "Date": "Sat, 25 Apr 2026 08:41:19 GMT"
+              },
+              "is_json_response": false,
+              "body": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <title>Login Page</title>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/WebGoat/css/main.css\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/WebGoat/plugins/bootstrap/css/bootstrap.min.css\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/WebGoat/css/font-awesome.min.css\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/WebGoat/css/animate.css\"/>\n</head>\n<body>\n<section id=\"container\">\n    <header id=\"header\">\n        <div class=\"brand\">\n            <a href=\"/WebGoat/start.mvc\" class=\"logo\"><span>Web</span>Goat</a>\n        </div>\n        <div class=\"lessonTitle\">\n        </div>\n\n    </header>\n    <section class=\"main-content-wrapper\">\n\n        <section id=\"main-content\">\n            <br/><br/>\n            <fieldset>\n                <legend>Register</legend>\n                <form class=\"form-horizontal\" action=\"/WebGoat/register.mvc\" method='POST'>\n\n                    <div class=\"form-group\">\n                        <label for=\"username\" class=\"col-sm-2 control-label\">Username</label>\n                        <div class=\"col-sm-4\">\n                            <input autofocus=\"dummy_for_thymeleaf_parser\" type=\"text\" class=\"form-control\"\n                                   id=\"username\" placeholder=\"Username\" name='username' value=\"\"/>\n                        </div>\n                        \n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"password\" class=\"col-sm-2 control-label\">Password</label>\n                        <div class=\"col-sm-4\">\n                            <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\"\n                                   name='password' value=\"\"/>\n                        </div>\n                        \n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"matchingPassword\" class=\"col-sm-2 control-label\">Confirm password</label>\n                        <div class=\"col-sm-4\">\n                            <input type=\"password\" class=\"form-control\" id=\"matchingPassword\" placeholder=\"Password\"\n                                   name='matchingPassword' value=\"\"/>\n                        </div>\n                        \n\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-2 control-label\">Terms of use</label>\n                        <div class=\"col-sm-6\">\n                            <div style=\"border: 1px solid #e5e5e5; height: 200px; overflow: auto; padding: 10px;\">\n                                <p >While running this program your machine will be extremely vulnerable to attack.You should disconnect from the Internet while using this program. WebGoat&#39;s default configuration binds to localhost to minimize the exposure.</p>\n                                <p>This program is for educational purposes only. If you attempt these techniques without authorization, you are very likely to get caught. If you are caught engaging in unauthorized hacking, most companies will fire you. Claiming that you were doing security research will not work as that is the first thing that all hackers claim.</p>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-6 col-sm-offset-2\">\n                            <div class=\"checkbox\">\n                                <label>\n                                    <input type=\"checkbox\" name=\"agree\" value=\"agree\"/><p>Agree with the terms and conditions</p>\n                                </label>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-offset-2 col-sm-6\">\n                            <button type=\"submit\" class=\"btn btn-primary\">Sign up</button>\n                        </div>\n                    </div>\n                </form>\n            </fieldset>\n        </section>\n    </section>\n</section>\n\n\n</body>\n</html>",
+              "lfi_detected": false,
+              "xss_reflected": "",
+              "server_in_body": false
+            }
+          }
+        ],
+        "timestamp": "2026-04-25T14:11:13.767289",
+        "sandbox_verified": true,
+        "sandbox_evidence": "CLICKJACKING VERIFIED: no X-Frame-Options or CSP frame-ancestors headers"
+      }
+    ],
+    "owasp_categories": [
+      "A03_Injection",
+      "A05_Security_Misconfiguration",
+      "A06_Security_Misconfiguration"
+    ],
+    "timestamp": "2026-04-25T14:11:20.467838",
+    "llm_stats": {
+      "executor": {
+        "role": "executor",
+        "model": "llama-3.3-70b-versatile",
+        "provider": "groq",
+        "total_tokens": 4690,
+        "call_count": 4
+      }
+    }
+  },
+  "critique": {
+    "target_url": "http://localhost:9001/WebGoat",
+    "approved_count": 2,
+    "rejected_count": 0,
+    "refine_count": 0,
+    "approved_findings": [
+      {
+        "step_id": 2,
+        "step_name": "CSRF Test",
+        "tool": "http_probe",
+        "args": {
+          "url": "http://localhost:9001/WebGoat/login"
+        },
+        "finding": "CSRF ANALYSIS: Form found WITHOUT CSRF token. State-changing=True. Token detected=False. Body: <!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <title>Login Page</title>\n    <link rel=\"shortcut icon\" href=\"/WebGoat/css/img/",
+        "confidence": 0.5
+      },
+      {
+        "step_id": 3,
+        "step_name": "Misconfiguration Analysis [Clickjacking]",
+        "tool": "http_probe",
+        "args": {
+          "url": "http://localhost:9001/WebGoat/registration"
+        },
+        "finding": "SECURITY HEADERS MISSING: CSP=ABSENT, X-Frame-Options=ABSENT. Server: unknown",
+        "confidence": 0.5
+      }
+    ],
+    "critiqued_steps": []
+  },
+  "sandbox": {
+    "target_url": "http://localhost:9001/WebGoat",
+    "total_validated": 2,
+    "verified_count": 2,
+    "unverified_count": 0,
+    "validations": [
+      {
+        "step_id": 2,
+        "step_name": "CSRF Test",
+        "tool": "http_probe",
+        "args": {
+          "url": "http://localhost:9001/WebGoat/login"
+        },
+        "verified": true,
+        "evidence": "CSRF VERIFIED: state-changing form found without CSRF token",
+        "method": "real_curl_csrf_check",
+        "original_finding": "CSRF ANALYSIS: Form found WITHOUT CSRF token. State-changing=True. Token detected=False. Body: <!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <title>Login Page</title>\n    <link rel=\"shortcut icon\" href=\"/WebGoat/css/img/",
+        "confidence": 0.5,
+        "severity": "medium",
+        "vuln_type": "CSRF Test",
+        "owasp": "A05_Security_Misconfiguration",
+        "mitre_technique": "T1202",
+        "location": "http://localhost:9001/WebGoat/login"
+      },
+      {
+        "step_id": 3,
+        "step_name": "Misconfiguration Analysis [Clickjacking]",
+        "tool": "http_probe",
+        "args": {
+          "url": "http://localhost:9001/WebGoat/registration"
+        },
+        "verified": true,
+        "evidence": "CLICKJACKING VERIFIED: no X-Frame-Options or CSP frame-ancestors headers",
+        "method": "real_curl_clickjacking_check",
+        "original_finding": "SECURITY HEADERS MISSING: CSP=ABSENT, X-Frame-Options=ABSENT. Server: unknown",
+        "confidence": 0.5,
+        "severity": "medium",
+        "vuln_type": "Misconfiguration Analysis [Clickjacking]",
+        "owasp": "A06_Security_Misconfiguration",
+        "mitre_technique": "T1557",
+        "location": "http://localhost:9001/WebGoat/registration"
+      }
+    ],
+    "timestamp": "2026-04-25T14:11:21.778224"
+  },
+  "ekb_stored": [],
+  "pipeline_summary": {
+    "phase": "Phase 6 (Report Agent)",
+    "pipeline_order": "Recon(+ZAP) -> VulnAnalyst -> CurriculumScore -> Planner(EKB) -> Execution -> Critique -> Sandbox -> EKBStore -> ReportAgent",
+    "timestamp": "2026-04-25T14:08:16.242380",
+    "mode": "full",
+    "total_time_seconds": 189.208183,
+    "zap_alerts": 140,
+    "zap_source": "api",
+    "urls_discovered": 17,
+    "injectable_candidates": 8,
+    "confirmed_vulns": 3,
+    "critical_high_vulns": 1,
+    "execution_steps": 3,
+    "execution_success_rate": 0.6666666666666666,
+    "critique_approved": 2,
+    "critique_rejected": 0,
+    "sandbox_verified": 2,
+    "sandbox_unverified": 0,
+    "ekb_entries_stored": 0,
+    "curriculum_avg_score": 0.415,
+    "curriculum_tier": "simple",
+    "esr_this_run": {
+      "simple": {
+        "attempts": 1,
+        "successes": 1,
+        "esr": 1.0,
+        "esr_pct": "100.0%",
+        "weighted_esr": 1.0,
+        "weighted_esr_pct": "100.0%"
+      },
+      "medium": {
+        "attempts": 2,
+        "successes": 1,
+        "esr": 0.5,
+        "esr_pct": "50.0%",
+        "weighted_esr": 0.412,
+        "weighted_esr_pct": "41.2%"
+      }
+    },
+    "html_report": "reports/report_localhost_9001_WebGoat_20260425_141125.html",
+    "elk_report": "reports/report_localhost_9001_WebGoat_20260425_141125_elk.json"
+  },
+  "report": {
+    "html_path": "reports/report_localhost_9001_WebGoat_20260425_141125.html",
+    "elk_path": "reports/report_localhost_9001_WebGoat_20260425_141125_elk.json",
+    "validated_count": 2,
+    "overall_risk": "medium",
+    "mitre_techniques": [
+      "T1202",
+      "T1557"
+    ],
+    "executive_summary": "Our security assessment of the http://localhost:9001/WebGoat application revealed several potential vulnerabilities, with two validated medium-risk issues, posing an overall medium risk to the system. The assessment identified weaknesses in the application's configuration and user interaction handling. To ensure the security of the application, it is essential to address these findings and implement necessary fixes.\n\nKey findings include:\n* A Cross-Site Request Forgery (CSRF) vulnerability in the login page, allowing an attacker to trick users into performing unintended actions\n* A Clickjacking vulnerability in the registration page, enabling an attacker to hide malicious content beneath legitimate content\n* The application is susceptible to misconfiguration, which can be exploited by attackers\n* The identified vulnerabilities can be used in conjunction with other techniques, such as T1202 and T1557, to launch more complex attacks\n\nImmediate actions to be taken:\n* Implement CSRF protection mechanisms, such as tokens, to prevent unauthorized requests\n* Apply Clickjacking defenses, like frame-busting code, to prevent malicious content from being embedded\n* Review and update the application's configuration to prevent misconfiguration-based attacks and ensure the security of user interactions"
+  }
+}

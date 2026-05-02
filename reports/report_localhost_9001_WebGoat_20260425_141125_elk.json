@@ -1,0 +1,54 @@
+{
+  "@timestamp": "2026-04-25T14:08:16.242380",
+  "@version": "1",
+  "type": "pentest_report",
+  "target.url": "http://localhost:9001/WebGoat",
+  "target.ip": "localhost",
+  "target.web_server": "Unknown",
+  "scan.mode": "full",
+  "scan.duration_s": 189.208183,
+  "scan.zap_alerts": 140,
+  "scan.zap_source": "api",
+  "scan.urls_found": 17,
+  "scan.candidates_analyzed": 3,
+  "risk.overall": "medium",
+  "risk.validated_vulns": 2,
+  "risk.critical_high": 0,
+  "pipeline.steps": 3,
+  "pipeline.tool_execution_rate": 0,
+  "pipeline.validation_rate": 0.6666666666666666,
+  "mitre.techniques": [
+    "T1202",
+    "T1557"
+  ],
+  "executive_summary": "Our security assessment of the http://localhost:9001/WebGoat application revealed several potential vulnerabilities, with two validated medium-risk issues, posing an overall medium risk to the system. The assessment identified weaknesses in the application's configuration and user interaction handling. To ensure the security of the application, it is essential to address these findings and implement necessary fixes.\n\nKey findings include:\n* A Cross-Site Request Forgery (CSRF) vulnerability in the login page, allowing an attacker to trick users into performing unintended actions\n* A Clickjacking vulnerability in the registration page, enabling an attacker to hide malicious content beneath legitimate content\n* The application is susceptible to misconfiguration, which can be exploited by attackers\n* The identified vulnerabilities can be used in conjunction with other techniques, such as T1202 and T1557, to launch more complex attacks\n\nImmediate actions to be taken:\n* Implement CSRF protection mechanisms, such as tokens, to prevent unauthorized requests\n* Apply Clickjacking defenses, like frame-busting code, to prevent malicious content from being embedded\n* Review and update the application's configuration to prevent misconfiguration-based attacks and ensure the security of user interactions",
+  "validated_vulnerabilities": [
+    {
+      "type": "CSRF Test",
+      "severity": "medium",
+      "owasp": "A05_Security_Misconfiguration",
+      "mitre_technique": "T1202",
+      "mitre_name": "Unknown",
+      "location": "http://localhost:9001/WebGoat/login",
+      "evidence": "CSRF VERIFIED: state-changing form found without CSRF token",
+      "remediation": "Harden server configuration. Remove default credentials. Disable unnecessary features."
+    },
+    {
+      "type": "Misconfiguration Analysis [Clickjacking]",
+      "severity": "medium",
+      "owasp": "A06_Security_Misconfiguration",
+      "mitre_technique": "T1557",
+      "mitre_name": "Unknown",
+      "location": "http://localhost:9001/WebGoat/registration",
+      "evidence": "CLICKJACKING VERIFIED: no X-Frame-Options or CSP frame-ancestors headers",
+      "remediation": "Review application security controls for this vulnerability class."
+    }
+  ],
+  "potential_vulnerabilities": [],
+  "rejected_findings": [
+    {
+      "target": "XSS Test",
+      "rejection_reason": "Tool execution failed"
+    }
+  ]
+}

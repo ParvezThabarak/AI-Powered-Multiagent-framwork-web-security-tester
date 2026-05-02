@@ -1,0 +1,58 @@
+{
+  "@timestamp": "2026-04-24T22:17:19.573866",
+  "@version": "1",
+  "type": "pentest_report",
+  "target.url": "http://localhost:8082/WebGoat",
+  "target.ip": "localhost",
+  "target.web_server": "Unknown",
+  "scan.mode": "full",
+  "scan.duration_s": 220.683877,
+  "scan.zap_alerts": 142,
+  "scan.zap_source": "api",
+  "scan.urls_found": 17,
+  "scan.candidates_analyzed": 4,
+  "risk.overall": "high",
+  "risk.validated_vulns": 2,
+  "risk.critical_high": 1,
+  "pipeline.steps": 4,
+  "pipeline.tool_execution_rate": 0,
+  "pipeline.validation_rate": 0.5,
+  "mitre.techniques": [
+    "T1557",
+    "T1190"
+  ],
+  "executive_summary": "We conducted a security assessment of the http://localhost:8082/WebGoat application, identifying significant vulnerabilities that pose a high risk to the system. Our testing revealed multiple issues, including a critical SQL injection vulnerability and a medium-severity misconfiguration issue, which could be exploited by attackers to compromise the application. Overall, the risk associated with these findings is considered high, requiring immediate attention to mitigate potential threats.\n\nKey findings include:\n* A high-severity SQL injection vulnerability was detected, allowing attackers to potentially extract or modify sensitive data\n* A medium-severity misconfiguration issue was identified, related to clickjacking, which could be used to trick users into performing unintended actions\n* The application is vulnerable to attack techniques categorized as T1557 and T1190, indicating potential weaknesses in data manipulation and exploitation of remote services\n* The presence of 142 total alerts, including 2 validated vulnerabilities, suggests a need for comprehensive review and remediation of the application's security posture\n\nImmediate actions should include:\n* Addressing the high-severity SQL injection vulnerability to prevent potential data breaches\n* Remedying the medium-severity misconfiguration issue to prevent clickjacking attacks\n* Conducting a thorough review of the application's configuration and code to identify and address any additional vulnerabilities or weaknesses",
+  "validated_vulnerabilities": [
+    {
+      "type": "SQLi Detection",
+      "severity": "high",
+      "owasp": "A03_Injection",
+      "mitre_technique": "T1190",
+      "mitre_name": "Exploit Public-Facing Application",
+      "location": "http://localhost:8082/WebGoat/vulnerabilities/sqli/?id=1",
+      "evidence": "sqlmap confirmed: ___\n       __H__\n ___ ___[']_____ ___ ___  {1.10.3.11#dev}\n|_ -| . [']     | .'| . |\n|___|_  [']_|_|_|__,|  _|\n      |_|V...       |_|   https://sqlmap.org\n\n[!] legal disclaimer: Usage of sqlmap for a",
+      "remediation": "Use parameterised queries and prepared statements. Validate all input server-side."
+    },
+    {
+      "type": "Misconfiguration Test [Clickjacking]",
+      "severity": "medium",
+      "owasp": "A06_Security_Misconfiguration",
+      "mitre_technique": "T1557",
+      "mitre_name": "Unknown",
+      "location": "http://localhost:8082/WebGoat/registration",
+      "evidence": "CLICKJACKING VERIFIED: no X-Frame-Options or CSP frame-ancestors headers",
+      "remediation": "Review application security controls for this vulnerability class."
+    }
+  ],
+  "potential_vulnerabilities": [],
+  "rejected_findings": [
+    {
+      "target": "SQLi Exploitation",
+      "rejection_reason": "Tool execution failed"
+    },
+    {
+      "target": "XSS Test",
+      "rejection_reason": "Tool execution failed"
+    }
+  ]
+}
