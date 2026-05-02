@@ -1,0 +1,40 @@
+HOW TO START ZAP BEFORE RUNNING THE PIPELINE
+=============================================
+
+RECOMMENDED — Run this command in PowerShell:
+
+    powershell -ExecutionPolicy Bypass -File .\start_zap.ps1
+
+OR manually start ZAP daemon:
+
+    "C:\Program Files\ZAP\Zed Attack Proxy\zap.bat" -daemon -port 9002 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true
+
+VERIFY ZAP IS RUNNING:
+Open browser and go to: http://localhost:9002
+You should see the ZAP API page.
+
+THEN RUN THE PIPELINE:
+    python main.py --target http://localhost:9000 --mode full
+
+NOTES:
+- ZAP must be started BEFORE running main.py in full mode
+- Quick mode skips ZAP entirely (no need to start ZAP)
+- If ZAP is not running, the pipeline falls back to simulated scan automatically
+- ZAP port is set to 9002 in config/config.py (ZAP_SETTINGS)
+==========================================================================================
+
+HOW TO START NAMAP BEFORE RUNNING THE PIPELINE
+
+$env:NMAP_PATH = "E:\AI-Powered Multi-Agent Web Security Tester\nmap\nmap.exe"
+python main.py --target http://localhost:9001/WebGoat --mode full
+=======================================================================================================================================
+
+HOW TO START ELK STACK BEFORE RUNNING THE PIPELINE 
+
+# 1. Start Docker Desktop
+# 2. From project root:
+cd elk-docker
+docker-compose up -d
+# 3. Wait ~60 seconds then open:
+start http://localhost:5601
+=======================================================================================================================================

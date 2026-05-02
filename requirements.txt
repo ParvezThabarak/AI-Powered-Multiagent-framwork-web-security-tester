@@ -1,0 +1,9 @@
+# AI-Powered Multi-Agent Web Security Tester — Phase 6
+openai>=1.0.0
+python-dotenv>=1.0.0
+requests>=2.28.0
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.2
+numpy>=1.24.0
+# Phase 6: HTML report uses only Python builtins (no extra installs needed)
+# ELK JSON output uses json (builtin)
