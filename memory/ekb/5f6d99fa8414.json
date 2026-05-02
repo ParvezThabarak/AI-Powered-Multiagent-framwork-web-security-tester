@@ -1,0 +1,14 @@
+{
+  "id": "5f6d99fa8414",
+  "vuln_type": "HITL_Feedback",
+  "owasp_category": "A00_Human_Review",
+  "difficulty": 0.5,
+  "success": true,
+  "web_server": "human_review",
+  "retrieval_text": "Human review of Misconfiguration Test [Clickjacking] at http://localhost:8082/WebGoat: decision=approved. Evidence: CLICKJACKING VERIFIED: no X-Frame-Options or CSP frame-ancestors headers",
+  "timestamp": "2026-04-24T23:01:45.374829",
+  "notes": "HITL decision: approved for Misconfiguration Test [Clickjacking]",
+  "target_url": "http://localhost:8082/WebGoat",
+  "hitl_decision": "approved",
+  "step_name": "Misconfiguration Test [Clickjacking]"
+}

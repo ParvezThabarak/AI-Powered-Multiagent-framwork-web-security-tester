@@ -1,0 +1,14 @@
+{
+  "id": "a05eafd613ed",
+  "vuln_type": "HITL_Feedback",
+  "owasp_category": "A00_Human_Review",
+  "difficulty": 0.5,
+  "success": true,
+  "web_server": "human_review",
+  "retrieval_text": "Human review of SQLi Detection at http://localhost:8082/WebGoat: decision=approved. Evidence: sqlmap confirmed: ___\n       __H__\n ___ ___[.]_____ ___ ___  {1.10.3.11#dev}\n|_ ",
+  "timestamp": "2026-04-24T23:01:45.320086",
+  "notes": "HITL decision: approved for SQLi Detection",
+  "target_url": "http://localhost:8082/WebGoat",
+  "hitl_decision": "approved",
+  "step_name": "SQLi Detection"
+}

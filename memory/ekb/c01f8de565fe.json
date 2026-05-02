@@ -1,0 +1,14 @@
+{
+  "id": "c01f8de565fe",
+  "vuln_type": "HITL_Feedback",
+  "owasp_category": "A00_Human_Review",
+  "difficulty": 0.5,
+  "success": true,
+  "web_server": "human_review",
+  "retrieval_text": "Human review of CSRF Test at http://localhost:8082/WebGoat: decision=approved. Evidence: CSRF VERIFIED: state-changing form found without CSRF token",
+  "timestamp": "2026-04-24T14:38:01.719125",
+  "notes": "HITL decision: approved for CSRF Test",
+  "target_url": "http://localhost:8082/WebGoat",
+  "hitl_decision": "approved",
+  "step_name": "CSRF Test"
+}
