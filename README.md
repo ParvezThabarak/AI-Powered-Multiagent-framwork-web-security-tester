@@ -33,7 +33,6 @@
 - [Evaluation Metrics](#evaluation-metrics)
 - [Experimental Results](#experimental-results)
 - [Safety Bounds](#safety-bounds)
-- [Research Context](#research-context)
 - [Limitations and Future Work](#limitations-and-future-work)
 - [Legal and Ethical Notice](#legal-and-ethical-notice)
 
@@ -511,14 +510,6 @@ Additional safety mechanisms:
 
 ---
 
-## Research Context
-
-This repository is the implementation artefact for an unpublished research paper:
-
-> **"AI-Powered Multi-Agent Framework for Autonomous Web Application Penetration Testing"**
->
-> V. Parvez Thabarak, A. Bharath Kumar Reddy, Dr. S. Thanga Revathi
-> Department of Networking and Communications, SRM Institute of Science and Technology, Kattankulathur, Chennai, India
 
 ### Key Architectural Contributions
 
