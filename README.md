@@ -35,7 +35,6 @@
 - [Safety Bounds](#safety-bounds)
 - [Research Context](#research-context)
 - [Limitations and Future Work](#limitations-and-future-work)
-- [Authors](#authors)
 - [Legal and Ethical Notice](#legal-and-ethical-notice)
 
 ---
