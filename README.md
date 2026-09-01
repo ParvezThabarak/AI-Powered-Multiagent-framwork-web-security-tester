@@ -518,16 +518,6 @@ Additional safety mechanisms:
 3. **Progressive cross-scan learning** — the FAISS-indexed EKB stores 384-dimensional `all-MiniLM-L6-v2` embeddings of exploit outcomes, enabling Plan B reuse and HITL-driven calibration without gradient-based model updates.
 4. **Cost-bounded autonomy** — three hard safety limits keep each scan within a $0.30 API budget and a 30 tool-call ceiling.
 
-### Comparison With Prior Systems
-
-| System | Key Mechanism | Gap Addressed by This Work |
-|--------|--------------|---------------------------|
-| Co-RedTeam (Google, 2025) | ReAct loops, adaptive retry | No independent replay, no cross-scan memory |
-| MAPTA (UCL, 2025) | End-to-end exploit validator | Validates in same execution context (in-context bias risk) |
-| CurriculumPT (Beijing Jiaotong, 2025) | CVSS-guided task scheduling | LLM self-assessment only, no physical replay |
-| PentestMCP (Harbin UST, 2025) | Tools as typed MCP functions | No persistent cross-scan memory |
-| PENTEST-AI (2024) | MITRE ATT&CK annotations | No ensemble pre-filtering, no EKB |
-
 ---
 
 ## Limitations and Future Work
